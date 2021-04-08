@@ -1,0 +1,306 @@
+﻿@charset "UTF-8";
+body {
+    margin: 0;
+    height: 100%;
+    min-width: 1246px;
+}
+
+body a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.personage {
+    position: fixed;
+    bottom: 10%;
+    right: 4%;
+    z-index: 1;
+    opacity: .9;
+    transition: all 1.2s;
+}
+
+.personage img {
+    width: 60px;
+}
+
+.personage.personage-img {
+    right: 0;
+    animation: personage 1.2s linear forwards;
+}
+
+@keyframes personage {
+    0% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#personage-1 {
+    display: none;
+}
+
+.personage-1 {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, .5);
+    margin: 0 auto;
+}
+
+.personage-1_1 {
+    position: relative;
+    margin: auto;
+}
+
+.personage-1 img {
+    width: 31rem;
+}
+
+.personage-1 i {
+    line-height: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    font-size: 32px;
+    font-family: "方正粗黑宋简体";
+    cursor: pointer;
+    /*显示小手鼠标*/
+}
+
+
+/*------------------导航栏--------------------*/
+
+#header {
+    height: 60px;
+    position: relative;
+}
+
+.logo {
+    float: left;
+    margin: 14px 0;
+    margin-left: 10%;
+}
+
+.nav {
+    display: inline-block;
+    margin: 0;
+    padding-left: 12%;
+}
+
+.nav li {
+    float: left;
+    position: relative;
+    line-height: 58px;
+    margin: 0 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.nav a {
+    color: rgb(0, 0, 0);
+}
+
+.nav li:hover {
+    transform: translateY(-1px);
+    /*使li向上移动1px 向上为正 向下为负*/
+    border-bottom: 2px solid red;
+}
+
+
+/* .nav-1:hover .nav-One {
+    display: block;
+} */
+
+.nav-right {
+    float: right;
+    margin: 0 10% 0 0;
+    padding: 0;
+    display: inline-block;
+}
+
+
+/*激活伪元素 把float实例化*/
+
+.nav-right:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.nav-right li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 60px;
+    height: 58px;
+    font-size: 0;
+}
+
+.nav-right li:hover {
+    border-bottom: 2px solid red;
+}
+
+
+/*创建动画 */
+
+@keyframes search {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#search .button {
+    width: 66px;
+    height: 33px;
+    border-radius: 14px;
+    line-height: 1px;
+    margin: 0;
+    background: rgb(255, 255, 255);
+}
+
+.nav-One,
+.nav-Two {
+    display: none;
+    position: absolute;
+    top: 64px;
+    background-color: #fff;
+    margin: -3px 0 0 0;
+}
+
+.nav-One {
+    left: -387px;
+    z-index: 100;
+}
+
+.nav-Two {
+    left: -467px;
+    z-index: 100;
+}
+
+.nav-One-1,
+.nav-Two-1 {
+    width: 1519px;
+    min-width: 1080px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav-One-1 li,
+.nav-Two-1 li {
+    display: inline-block;
+    width: 14%;
+    position: relative;
+    left: 30%;
+    vertical-align: top;
+    /*垂直对齐方式：向上对齐*/
+}
+
+.nav-Two-1 li {
+    left: 22%;
+}
+
+.nav-One-1 li a,
+.nav-Two-1 li a {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0 25px;
+    text-align: center;
+    line-height: 1;
+    color: #000000;
+}
+
+.nav-One-1 li img,
+.nav-Two-1 li img {
+    display: block;
+    width: 40px;
+    height: 37px;
+    margin: 10px auto;
+}
+
+.centre,
+.leaveword,
+.Seek {
+    position: absolute;
+    top: 19px;
+    left: 16px;
+}
+
+
+/*------------------底部栏--------------------*/
+
+footer {
+    display: grid;
+    border-top: 1px solid rgba(148, 148, 148, 0.7);
+}
+
+.footer-nav {
+    margin: 26px auto 16px;
+}
+
+.footer-nav dl {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: text-top;
+    /*垂直对齐方式：文本顶部*/
+}
+
+.footer-nav dl dd {
+    margin: 0;
+    width: 197px;
+    padding: 10px 0;
+    color: #828282;
+    font-size: 13px;
+    cursor: pointer;
+    /*显示小手鼠标*/
+}
+
+.sponsorship {
+    max-width: 173px;
+    float: right;
+    margin-left: 230px;
+}
+
+.sponsorship dt,
+.sponsorship div {
+    display: block;
+    float: right;
+    padding: 0 15px 0 0;
+}
+
+.sponsorship dt:before {
+    content: "";
+    clear: both;
+}
+
+.sponsorship div {
+    margin: 0 0 15px 0;
+}
+
+.footer {
+    border-top: 1px solid rgba(148, 148, 148, 0.7);
+}
+
+.footer ul {
+    text-align: center;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.footer li {
+    display: inline-block;
+    color: #757575;
+}
